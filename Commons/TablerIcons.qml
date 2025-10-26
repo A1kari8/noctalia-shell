@@ -36,6 +36,7 @@ Singleton {
     "cpu-usage": "brand-speedtest",
     "cpu-temperature": "flame",
     "gpu-temperature": "device-desktop",
+    "hibernate": "snowflake",
     "memory": "cpu",
     "performance": "gauge",
     "balanced": "scale",

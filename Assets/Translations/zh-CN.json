@@ -841,6 +841,10 @@
         "description": "系统挂起时自动锁定屏幕。",
         "label": "挂起时锁定"
       },
+      "lock-on-hibernate": {
+        "description": "系统休眠时自动锁定屏幕。",
+        "label": "休眠时锁定"
+      },
       "title": "锁屏"
     }
   },
@@ -1477,7 +1481,9 @@
     "action-in-seconds": "{action} in {seconds} seconds...",
     "lock": "锁定",
     "lock-and-suspend": "锁定并挂起",
+    "lock-and-hibernate": "锁定并休眠",
     "suspend": "挂起",
+    "hibernate": "休眠",
     "reboot": "重启",
     "logout": "注销",
     "shutdown": "关机"
@@ -1523,7 +1529,8 @@
     "authentication-failed": "验证失败",
     "shut-down": "关机",
     "restart": "重启",
-    "suspend": "挂起"
+    "suspend": "挂起",
+    "hibernate": "休眠"
   },
   "quickSettings": {
     "notifications": {

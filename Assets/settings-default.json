@@ -68,6 +68,7 @@
     "animationDisabled": false,
     "compactLockScreen": false,
     "lockOnSuspend": true,
+    "lockOnHibernate": true,
     "language": ""
   },
   "location": {

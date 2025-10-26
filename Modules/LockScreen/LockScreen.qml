@@ -1246,6 +1246,54 @@ Loader {
                     Layout.fillWidth: true
                     Layout.preferredHeight: Settings.data.general.compactLockScreen ? 36 : 48
                     radius: Settings.data.general.compactLockScreen ? 18 : 24
+                    color: hibernateButtonArea.containsMouse ? Color.mTertiary : "transparent"
+                    border.color: Color.mOutline
+                    border.width: 1
+
+                    RowLayout {
+                      anchors.centerIn: parent
+                      spacing: 6
+
+                      NIcon {
+                        icon: "hibernate"
+                        pointSize: Settings.data.general.compactLockScreen ? Style.fontSizeM : Style.fontSizeL
+                        color: hibernateButtonArea.containsMouse ? Color.mOnTertiary : Color.mOnSurfaceVariant
+                      }
+
+                      NText {
+                        text: I18n.tr("session-menu.hibernate")
+                        color: hibernateButtonArea.containsMouse ? Color.mOnTertiary : Color.mOnSurfaceVariant
+                        pointSize: Settings.data.general.compactLockScreen ? Style.fontSizeS : Style.fontSizeM
+                        font.weight: Font.Medium
+                      }
+                    }
+
+                    MouseArea {
+                      id: hibernateButtonArea
+                      anchors.fill: parent
+                      hoverEnabled: true
+                      onClicked: CompositorService.hibernate()
+                    }
+
+                    Behavior on color {
+                      ColorAnimation {
+                        duration: 200
+                        easing.type: Easing.OutCubic
+                      }
+                    }
+
+                    Behavior on border.color {
+                      ColorAnimation {
+                        duration: 200
+                        easing.type: Easing.OutCubic
+                      }
+                    }
+                  }
+
+                  Rectangle {
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: Settings.data.general.compactLockScreen ? 36 : 48
+                    radius: Settings.data.general.compactLockScreen ? 18 : 24
                     color: rebootButtonArea.containsMouse ? Color.mTertiary : "transparent"
                     border.color: Color.mOutline
                     border.width: 1
