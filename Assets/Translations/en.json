@@ -841,6 +841,10 @@
       "lock-on-suspend": {
         "label": "Lock on suspend",
         "description": "Automatically lock the screen when suspending the system."
+      },
+      "lock-on-hibernate": {
+        "label": "Lock on hibernate",
+        "description": "Automatically lock the screen when hibernating the system."
       }
     }
   },
@@ -1477,7 +1481,9 @@
     "action-in-seconds": "{action} in {seconds} seconds...",
     "lock": "Lock",
     "lock-and-suspend": "Lock and Suspend",
+    "lock-and-hibernate": "Lock and Hibernate",
     "suspend": "Suspend",
+    "hibernate": "Hibernate",
     "reboot": "Reboot",
     "logout": "Logout",
     "shutdown": "Shutdown"
@@ -1523,7 +1529,8 @@
     "authentication-failed": "Authentication failed",
     "shut-down": "Shut down",
     "restart": "Restart",
-    "suspend": "Suspend"
+    "suspend": "Suspend",
+    "hibernate": "Hibernate"
   },
   "quickSettings": {
     "notifications": {

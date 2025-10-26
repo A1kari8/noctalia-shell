@@ -14,7 +14,7 @@ NPanel {
   id: root
 
   preferredWidth: 400 * Style.uiScaleRatio
-  preferredHeight: 340 * Style.uiScaleRatio
+  preferredHeight: 400 * Style.uiScaleRatio
   panelAnchorHorizontalCenter: true
   panelAnchorVerticalCenter: true
   panelKeyboardFocus: true
@@ -35,7 +35,11 @@ NPanel {
       "action": "suspend",
       "icon": "suspend",
       "title": I18n.tr("session-menu.suspend")
-    }, {
+    },{
+      "action": "hibernate",
+      "icon": "hibernate",
+      "title": I18n.tr("session-menu.hibernate")
+    },{
       "action": "reboot",
       "icon": "reboot",
       "title": I18n.tr("session-menu.reboot")
@@ -98,6 +102,13 @@ NPanel {
         CompositorService.lockAndSuspend()
       } else {
         CompositorService.suspend()
+      }
+      break
+    case "hibernate":
+      if (Settings.data.general.lockOnHibernate) {
+        CompositorService.lockAndHibernate()
+      } else {
+        CompositorService.hibernate()
       }
       break
     case "reboot":
